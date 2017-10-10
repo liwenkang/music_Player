@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        * {
+            margin: 5px;
+            padding: 5px;
+        }
+        song {
+            border: 1px solid black;
+            cursor: pointer;
+        }
+    </style>
+    <script src="tools.js"></script>
+    <script src="jquery-3.2.1.js"></script>
+    <script src="musicPlayer.js"></script>
+</head>
+<body>
+
+<h1 id=id-h1-song-title></h1>
+
+<!--加或是不加自动播放，这是一个问题（ε=ε=ε=┏(゜ロ゜;)┛   -->
+<!--<audio id=id-audio-player controls autoplay></audio>-->
+<audio id=id-audio-player controls></audio>
+
+<div class="player-controls">
+    <div class="player-slider">
+        <!--播放进度条-->
+        <input id=id-input-slider type="range" value=0 min=0 max=100>
+    </div>
+
+    <div class="player-time">
+        <time id=id-time-current class=left>0:00</time>
+        <time id=id-time-duration class=right></time>
+        <span id="id-span-mode">默认播一首就停止</span>
+    </div>
+
+    <div class="player-play">
+        <button type="button" data-action=prev>上一首</button>
+        <button type="button" data-action=play id=id-button-play>播放</button>
+        <button type="button" data-action=next>下一首</button>
+    </div>
+
+    <div class="player-mode">
+        <button type="button" data-action=single>单曲</button>
+        <button type="button" data-action=loop>循环</button>
+        <button type="button" data-action=random>随机</button>
+    </div>
+</div>
+
+<div class="play-list-container">
+    <span>单击切换歌曲</span>
+    <ol class="play-list">
+        <li><song>没头脑不高兴.mp3</song></li>
+        <li><song>adan.mp3</song></li>
+        <li><song>死人.flac</song></li>
+    </ol>
+</div>
+
+</body>
+</html>
