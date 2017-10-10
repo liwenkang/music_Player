@@ -22,7 +22,7 @@ var randomMode = function (list) {
         var randomNum = Math.round(Math.random() * player.data.length)
 
         player[0].src = list[randomNum]
-        $('#id-h1-song-title').text(list[randomNum])
+        $('#id-h1-song-title').text(getSongName(list[list.index]))
         player[0].play()
         setButtonPause()
 

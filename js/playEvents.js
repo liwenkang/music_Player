@@ -13,7 +13,7 @@ var prevSong = function (list) {
         list.index = list.len
     }
     player[0].src = list[--list.index]
-    $('#id-h1-song-title').text(list[list.index])
+    $('#id-h1-song-title').text(getSongName(list[list.index]))
     player[0].play()
     setButtonPause()
 
@@ -27,7 +27,7 @@ var nextSong = function (list) {
         list.index = -1
     }
     player[0].src = list[++list.index]
-    $('#id-h1-song-title').text(list[list.index])
+    $('#id-h1-song-title').text(getSongName(list[list.index]))
     player[0].play()
     setButtonPause()
 

@@ -11,6 +11,6 @@ var bindSwitchEvents = function () {
         // 此处无法获得歌曲时间长短
 //                log(player.duration)
         // 设置当前歌曲名称
-        $('#id-h1-song-title').text(song)
+        $('#id-h1-song-title').text(song.replace(/(\.mp3|\.flac)/g, ""))
     })
 }
